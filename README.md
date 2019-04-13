@@ -1,5 +1,8 @@
 # Mergify.io config validator
 
+[![Demo Badge](https://img.shields.io/badge/Demo-Deployed-brightgreen.svg)](https://mergify.adrianjost.dev/)
+
+
 ## About
 
 Mergify is an aweseome GitHub-Bot! But checking your config can be a pain, when using Windows.
