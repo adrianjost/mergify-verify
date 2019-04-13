@@ -4,8 +4,12 @@
 	"description": "Validate Mergify Config",
 	"main": "index.html",
 	"scripts": {
-		"dev": "parcel index.html -p 8080",
-		"build": "parcel build index.html"
+		"dev": "parcel src/index.html -p 8080",
+		"build": "parcel build src/index.html",
+		"cy:open": "cypress open",
+		"cy:run": "cypress run --record --parallel",
+		"cy:verify": "cypress verify",
+		"ci": "start-server-and-test dev http://localhost:8080 cy:run"
 	},
 	"keywords": [
 		"mergify.io"
@@ -13,8 +17,10 @@
 	"author": "Adrian Jost",
 	"license": "MIT",
 	"devDependencies": {
+		"cypress": "^3.2.0",
 		"parcel-bundler": "^1.12.3",
 		"prettier": "^1.17.0",
-		"sass": "^1.18.0"
+		"sass": "^1.18.0",
+		"start-server-and-test": "^1.7.13"
 	}
 }
