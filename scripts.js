@@ -42,7 +42,11 @@ function getConfigFile() {
 
 FORM.addEventListener("submit", (event) => {
 	event.preventDefault();
-	verify(getConfigFile()).then((result) => {
-		VALIDATION_OUTPUT.innerText = result;
-	});
+	verify(getConfigFile())
+		.then((result) => {
+			VALIDATION_OUTPUT.innerText = result;
+		})
+		.catch((error) => {
+			VALIDATION_OUTPUT.innerText = error;
+		});
 });
