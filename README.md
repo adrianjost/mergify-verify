@@ -23,4 +23,7 @@ yarn dev
 
 # build for production
 yarn build
+
+# open test runner (cypress)
+cy:open
 ```

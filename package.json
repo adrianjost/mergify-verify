@@ -7,9 +7,9 @@
 		"dev": "parcel src/index.html -p 8080",
 		"build": "parcel build src/index.html",
 		"cy:open": "cypress open",
-		"cy:run": "cypress run --record --parallel",
+		"cy:ci": "cypress run --record --parallel",
 		"cy:verify": "cypress verify",
-		"ci": "start-server-and-test dev http://localhost:8080 cy:run"
+		"ci": "start-server-and-test dev http://localhost:8080 cy:ci"
 	},
 	"keywords": [
 		"mergify.io"
