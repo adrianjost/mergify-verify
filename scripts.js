@@ -1,5 +1,4 @@
-const DEFAULT_CONFIG = `
-pull_request_rules:
+const DEFAULT_CONFIG = `pull_request_rules:
   - name: automatic merge when CI passes and 2 reviews
     conditions:
       - "#approved-reviews-by>=2"
@@ -11,14 +10,39 @@ pull_request_rules:
         method: merge
   `;
 
-const file = new File([DEFAULT_CONFIG], ".mergify.yml", { type: "text/plain" })
-const body = new FormData();
-body.append("data", file);
+const FORM = document.querySelector("form#validation-form");
+const FORM_ACTION = FORM.getAttribute("action");
+const FORM_METHOD = FORM.getAttribute("method");
+const CONFIG_TEXT = FORM.querySelector("[name=config]");
+// const CONFIG_FILE = FORM.querySelector("[name=data]");
+const VALIDATION_OUTPUT = document.querySelector("#output");
 
-fetch("http://localhost:5000/validate", {
-    method: "POST",
-    body,
-    //mode: "no-cors",
-  }).then((response) => {
-    return response.text()
-  }).then(console.log)
+CONFIG_TEXT.placeholder = DEFAULT_CONFIG;
+
+function createFile(config) {
+	return new File([config], ".mergify.yml", { type: "text/plain" });
+}
+
+function verify(file) {
+	const body = new FormData();
+	body.append("data", file);
+
+	return fetch(FORM_ACTION, {
+		method: FORM_METHOD,
+		body,
+	}).then((response) => {
+		return response.text();
+	});
+}
+
+function getConfigFile() {
+	return createFile(CONFIG_TEXT.value);
+	// return CONFIG_FILE.value ? CONFIG_FILE.value : createFile(CONFIG_TEXT.value);
+}
+
+FORM.addEventListener("submit", (event) => {
+	event.preventDefault();
+	verify(getConfigFile()).then((result) => {
+		VALIDATION_OUTPUT.innerText = result;
+	});
+});

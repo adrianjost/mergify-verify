@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mergify Verify</title>
-  <script src="scripts.js" defer></script>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  Loaded
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Mergify Verify</title>
+		<script src="scripts.js" defer></script>
+		<link rel="stylesheet" href="styles.scss" />
+	</head>
+	<body>
+		<main>
+			<h1>Validate your Mergify.io Config</h1>
+			<form
+				id="validation-form"
+				action="http://localhost:5000/validate"
+				method="POST"
+				enctype="multipart/form-data"
+			>
+				<textarea
+					class="textarea"
+					aria-label=".mergify.yml config"
+					name="config"
+				></textarea>
+				<!-- <input type="file" name="data" multiple /> -->
+				<button type="submit">VALIDATE</button>
+			</form>
+			<h2 class="output-label">Result:</h2>
+			<p id="output" class="textarea"></p>
+		</main>
+		<footer>
+			<a href="https://adrianjost.dev">
+				&copy; Adrian Jost
+			</a>
+		</footer>
+	</body>
 </html>
