@@ -11,8 +11,8 @@ const DEFAULT_CONFIG = `pull_request_rules:
   `;
 
 const FORM = document.querySelector("form#validation-form");
-const FORM_ACTION = FORM.getAttribute("action");
-const FORM_METHOD = FORM.getAttribute("method");
+const FORM_ACTION = process.env.FORM_ACTION || "https://gh.mergify.io/validate";
+const FORM_METHOD = process.env.FORM_METHOD || "POST";
 const CONFIG_TEXT = FORM.querySelector("[name=config]");
 // const CONFIG_FILE = FORM.querySelector("[name=data]");
 const VALIDATION_OUTPUT = document.querySelector("#output");

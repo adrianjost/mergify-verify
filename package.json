@@ -5,7 +5,7 @@
 	"main": "index.html",
 	"scripts": {
 		"dev": "parcel index.html -p 8080",
-		"build": "parcel watch index.html"
+		"build": "parcel build index.html"
 	},
 	"keywords": [
 		"mergify.io"
