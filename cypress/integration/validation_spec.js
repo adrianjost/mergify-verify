@@ -13,7 +13,7 @@ const INVALID_CONFIG = `pull_request_rules:
     delete_branch: {}`;
 
 describe("Test Validation", function() {
-	it("Positive Result on Valid Config", function() {
+	it("Positive result on valid config", function() {
 		cy.visit(TEST_URL);
 		cy.get("textarea")
 			.type(VALID_CONFIG)
@@ -24,7 +24,7 @@ describe("Test Validation", function() {
 		cy.get("#output").contains("configuration is valid");
 	});
 
-	it("Error on Inalid Config", function() {
+	it("Error on invalid config", function() {
 		cy.visit(TEST_URL);
 		cy.get("textarea")
 			.type(INVALID_CONFIG)
