@@ -1,4 +1,4 @@
-# Mergify.io config validator <img height="100" src="./src/img/icon.png" align="right" />
+# [Mergify.io](https://mergify.io) config validator <img height="100" src="./src/img/icon.png" align="right" />
 
 [![Build Status](https://travis-ci.com/adrianjost/mergify-verify.svg?branch=master)](https://travis-ci.com/adrianjost/mergify-verify)
 [![Demo Badge](https://img.shields.io/badge/Demo-Deployed-brightgreen.svg)](https://mergify.adrianjost.dev/)
