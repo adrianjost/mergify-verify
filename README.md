@@ -18,14 +18,14 @@ This Projects abstracts away the curl command from the [official documentation](
 
 ```bash
 # install dependencies
-yarn install
+npm i
 
 # open with live server (http://localhost:8080)
-yarn dev
+npm run dev
 
 # build for production
-yarn build
+npm run build
 
 # open test runner (cypress)
-cy:open
+npm run cy:open
 ```
