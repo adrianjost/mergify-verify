@@ -3,6 +3,7 @@ pull_request_rules:
     conditions:
       - author=greenkeeper[bot]
       - label~=greenkeeper
+      - status-success=Travis CI - Pull Request
     actions:
       merge:
         method: merge
