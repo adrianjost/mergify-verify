@@ -15,6 +15,13 @@
 			content="A simple UI to verify your mergify.io config file (.mergify.yml)"
 		/>
 		<script src="scripts.js" defer></script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker.register("/service-worker.js");
+				});
+			}
+		</script>
 		<link rel="stylesheet" href="styles.scss" />
 		<link rel="icon" href="./img/icon.ico" />
 	</head>
