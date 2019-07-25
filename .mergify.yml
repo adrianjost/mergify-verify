@@ -5,6 +5,7 @@ pull_request_rules:
       - label~=greenkeeper
       - status-success~=Travis CI
       - status-success~=WIP
+      - status-success~=netlify/elegant-fermat-9f0877/deploy-preview
     actions:
       merge:
         method: squash
@@ -15,6 +16,7 @@ pull_request_rules:
       - label~=dependencies
       - status-success~=Travis CI
       - status-success~=WIP
+      - status-success~=netlify/elegant-fermat-9f0877/deploy-preview
     actions:
       merge:
         method: squash
@@ -24,6 +26,7 @@ pull_request_rules:
       - label~=merge pull
       - status-success~=Travis CI
       - status-success~=WIP
+      - status-success~=netlify/elegant-fermat-9f0877/deploy-preview
     actions:
       merge:
         method: merge
