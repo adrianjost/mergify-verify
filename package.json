@@ -25,7 +25,7 @@
 		"sass": "^1.18.0"
 	},
 	"optionalDependencies": {
-		"cypress": "^3.2.0",
+		"cypress": "^3.4.1",
 		"start-server-and-test": "^1.7.13"
 	}
 }
