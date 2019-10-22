@@ -1,3 +1,5 @@
+# Update: [Mergify now has a Simulator](https://medium.com/mergify/whats-new-in-mergify-2019q3-edition-3bea07b481f5#64ab) and copied over this UI into their docs. Therefore this Repository will no longer be maintained.
+
 # [Mergify.io](https://mergify.io) config validator <img height="100" src="./src/img/icon.png" align="right" />
 
 [![Build Status](https://travis-ci.com/adrianjost/mergify-verify.svg?branch=master)](https://travis-ci.com/adrianjost/mergify-verify)
